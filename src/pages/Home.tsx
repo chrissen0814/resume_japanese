@@ -3,6 +3,7 @@ import BusinessInfo from "../components/BusinessInfo";
 import HobbyInfo from "../components/HobbyInfo";
 import LanguageInfo from "../components/LanguageInfo";
 import SkillInfo from "../components/SkillInfo";
+import LikeButton from "../components/LikeButton";
 import imgMail from "../assets/email.png";
 import imgRead from "../assets/reading-book.png";
 import imgTalk from "../assets/talking.png";
@@ -25,7 +26,7 @@ export default function Home() {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/fragments-69f1d.appspot.com/o/images%2Fc50b292208390a0deb776848c9192fbf.jpg?alt=media&token=baadedb6-ad97-427d-94ae-d4ddb2ad9a0b"
             alt="Avatar"
-            className="rounded-full w-24 h-24 sm:w-24 sm:h-24 mx-auto border-4 border-blue-300 object-cover object-[center_30%]"
+            className="rounded-full w-24 h-24 sm:w-24 sm:h-24 mx-auto border-4 border-gray-300 object-cover object-[center_30%]"
           />
           <h1 className="text-3xl font-bold">孫其瑞</h1>
           <p className="text-gray-500">
@@ -44,11 +45,13 @@ export default function Home() {
           <BasicInfomation name="住所" info="朝潮橋（中央線）" />
         </div>
 
-        <h2 className="w-full text-center text-2xl font-bold mt-14">言語能力</h2>
-        <div className="w-full flex flex-row justify-center mt-12 gap-6 sm:gap-12 md:gap-12  lg:gap-24">
+        <h2 className="w-full text-center text-2xl font-bold mt-14">
+          言語能力
+        </h2>
+        <div className="w-full flex flex-row justify-center mt-12 gap-6 sm:gap-16 md:gap-16 lg:gap-24">
           <div className="flex flex-col bg-white rounded-2xl shadow-lg p-10">
-            <h2 className="text-center text-2xl font-bold">日本語</h2>
-            <div className="w-full flex flex-wrap justify-center gap-8 mt-6 mb-6">
+            <h2 className="text-center text-2xl font-bold mb-4">日本語</h2>
+            <div className="w-full flex flex-wrap justify-center gap-8 lg:gap-16 mt-6 mb-6">
               <LanguageInfo image={imgWrite} name="書く" />
               <LanguageInfo image={imgRead} name="読む" />
               <LanguageInfo image={imgTalk} name="話す" />
@@ -57,8 +60,8 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col bg-white rounded-2xl shadow-lg p-10">
-            <h2 className="text-center text-2xl font-bold">英語</h2>
-            <div className="w-full flex flex-wrap justify-center gap-8 mt-6 mb-6">
+            <h2 className="text-center text-2xl font-bold mb-4">英語</h2>
+            <div className="w-full flex flex-wrap justify-center gap-8 lg:gap-16 mt-6 mb-6">
               <LanguageInfo image={imgWrite} name="書く" />
               <LanguageInfo image={imgDoc} name="ドキュメント" />
               <LanguageInfo image={imgRead} name="読む" />
@@ -72,10 +75,10 @@ export default function Home() {
           <SkillInfo image={imgAndroid} name="Android(6年)" />
           <SkillInfo image={imgJava} name="Java(3年)" />
           <SkillInfo image={imgKotlin} name="Kotlin(3年)" />
-          <SkillInfo image={ imgFlutter} name="Flutter(1年)"/>
+          <SkillInfo image={imgFlutter} name="Flutter(1年)" />
           <SkillInfo image={imgJS} name="JS(勉強中)" />
           <SkillInfo image={imgTS} name="TS(勉強中)" />
-          <SkillInfo image={ imgCsharp} name="C#(1年)"/>
+          <SkillInfo image={imgCsharp} name="C#(1年)" />
         </div>
 
         <div className="w-full flex flex-col justify-start items-start space-y-6 mt-14">
@@ -125,7 +128,7 @@ export default function Home() {
           />
         </div>
         <h2 className="text-center text-2xl font-bold mt-12">趣味</h2>
-        <div className="w-full flex flex-row justify-center space-x-12 mt-6 pb-8">
+        <div className="w-full flex flex-wrap justify-center gap-12 mt-8 pb-8">
           <HobbyInfo
             image="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=3590&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             name="バスケットボール"
@@ -142,6 +145,9 @@ export default function Home() {
             image="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             name="旅行"
           />
+        </div>
+        <div className="w-full flex justify-center pb-12">
+          <LikeButton />
         </div>
       </div>
     </div>

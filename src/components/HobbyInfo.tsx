@@ -11,7 +11,7 @@ export default function HobbyInfo({
         key={name}
         src={image}
         alt={name}
-        className="rounded shadow h-60 w-60 sm:w-60 sm:h-60 object-cover"
+        className="rounded-3xl shadow h-60 w-60 sm:w-60 sm:h-60 object-cover"
           />
           <p className="text-center text-black mt-4 text-lg">{ name}</p>
       </div>

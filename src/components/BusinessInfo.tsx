@@ -15,7 +15,7 @@ export default function BusinessInfo({
   showButton = false,
 }: Props) {
   return (
-    <div className="w-full flex flex-col bg-white rounded shadow p-4 space-y-4 sm:space-y-0">
+    <div className="w-full flex flex-col bg-white rounded-2xl shadow p-4 space-y-4 sm:space-y-0">
       <div className="w-full flex flex-col justify-start p-4">
         <p className="text-xl font-bold text-gray-600 text-start mb-1">{name}</p>
         <p className="text-xl text-start text-gray-400 mb-3">{time}</p>
@@ -25,7 +25,7 @@ export default function BusinessInfo({
               {showButton && (
                   <div className="mt-6 flex flex-row justify-center">
                       <Button
-            className="w-full max-w-40 "
+            className="w-full max-w-40"
             variant="contained"
             startIcon={<DownloadIcon />}
             href="https://drive.google.com/drive/folders/1qfiPj3G-7Vs85R00dFNqn54yRFUtZRg6"
